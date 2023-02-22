@@ -12,5 +12,29 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
+Route::get('/foo', function () {
+    return 'Hai';
+});
+Route::post('/foo', function () {
+    return 'Hai';
+});
+Route::put('/foo', function () {
+    return 'Hai';
+});
+Route::delete('/foo', function () {
+    return 'Hai';
+});
+Route::get('/user', function () {
+    return view('web');
+});
+Route::get('user', 'UserController@index');
+
+Route::redirect('/here', '/there');
+
+
+
+Route::view('/welcome', 'welcome');
+
+Route::view('/welcome', 'welcome', ['name' => 'Agil Gilang C.S']);
